@@ -1,1 +1,77 @@
-Day 1 on learnig os
+# Day 1/30 — What Even *Is* an Operating System?
+
+Starting a 30-day journey into Operating Systems, and Day 1 is about the question that everything else in this subject builds on: **what is an OS, and why do we even need one?**
+
+---
+
+## Application Software vs. System Software
+
+Before getting to the OS itself, it helps to separate two things that are easy to lump together:
+
+- **Application software** performs a specific task *for the user* — think of a photo editor, a browser, a game.
+- **System software** operates and controls the computer system, and provides the platform on which application software actually runs.
+
+An operating system falls into that second category — but it's the most important piece of it.
+
+## So, What Is an Operating System?
+
+Here's the definition I'm working with:
+
+> An **operating system** is a piece of software that manages all the resources of a computer system — both hardware and software — and provides an environment in which a user can execute their programs in a convenient and efficient manner, by hiding the underlying complexity of the hardware and acting as a **resource manager**.
+
+The two key phrases to hold onto here are **"hides complexity"** and **"resource manager"**. Almost everything an OS does traces back to one of those two jobs.
+
+## Why Do We Even Need an OS?
+
+The best way to understand *why* something exists is to imagine a world without it. So — what if there were no OS at all, and every application had to talk to the hardware directly?
+
+Three problems show up immediately:
+
+1. **Bulky and complex applications.** Without an OS, every single app would need to contain its own hardware-interaction code — its own drivers, its own way of talking to disk, memory, the screen. Every app becomes massive and duplicated effort multiplies across every piece of software ever written.
+2. **Resource exploitation by a single app.** With nothing managing access, one application could simply hog the CPU, memory, or disk, and nothing would stop it from starving every other program.
+3. **No memory protection.** Without an OS enforcing boundaries, one program could read or overwrite another program's memory — accidentally or maliciously. Chaos, basically.
+
+Put simply: an OS exists so application developers don't have to reinvent hardware-handling from scratch, and so multiple programs can coexist safely on the same machine.
+
+## What Is an OS Made Up Of?
+
+At its core, an OS is a **collection of system software** — a set of programs that work together to manage hardware and provide services to everything running above them.
+
+## The Core Functions of an Operating System
+
+Pulling this together, an operating system's job breaks down into a few concrete functions:
+
+- **Provides access to the computer hardware** — it's the layer that actually knows how to talk to disks, memory, network cards, etc.
+- **Acts as the interface between the user and the computer hardware** — you don't send raw signals to a hard drive; the OS handles that translation.
+- **Resource management, a.k.a. Arbitration** — deciding who gets the CPU, memory, devices, files, and security permissions, and when. This is the OS acting as referee between competing programs.
+- **Hides the underlying complexity of the hardware, a.k.a. Abstraction** — a programmer can write `open(file)` without knowing anything about disk sectors or controllers underneath.
+- **Facilitates execution of application programs by providing isolation and protection** — this is what solves the "no memory protection" problem from earlier. Each program gets its own safe space to run in.
+
+Two terms worth remembering here because they come up constantly in OS theory: **Arbitration** (resource management) and **Abstraction** (hiding complexity).
+
+## The Layered Picture
+
+The relationship stacks up cleanly:
+
+```
+        User
+          │
+Application Programs
+          │
+   Operating System
+          │
+   Computer Hardware
+```
+
+The user never touches hardware directly — they interact with application programs, which sit on top of the operating system, which sits on top of the hardware. Every layer only needs to understand the one directly below it.
+
+## Key Takeaways
+
+- The OS's whole reason for existing: **manage resources** + **hide complexity**.
+- Without an OS: bloated apps, unfair resource hogging, and zero memory protection.
+- An OS is fundamentally a *collection* of system software, not one single program.
+- Two functions to remember: **Arbitration** (who gets what, when) and **Abstraction** (making hardware usable without needing to understand it).
+
+---
+
+**Next up:** Day 2 — diving into processes and how the OS actually manages programs while they run.
