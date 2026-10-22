@@ -75,4 +75,4 @@ The user never touches hardware directly — they interact with application prog
 
 ---
 
-**Next up:** Day 2 — diving into processes and how the OS actually manages programs while they run.
+**Next up:** Day 2 — Types of operating system and there working.
