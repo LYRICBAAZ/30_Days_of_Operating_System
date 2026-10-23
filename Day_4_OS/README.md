@@ -132,7 +132,31 @@ Not every kernel is built the same way. The main designs differ in **how much th
 - Examples: **macOS, Windows NT / 7 / 10**.
 
 ### 4. Nano / Exo Kernels
-Listed in the notes as a heading only; these are more specialized designs that go further in shrinking the kernel. We'll revisit them if they come up later.
+
+1. Nanokernel
+Definition: A nanokernel is a very small kernel that performs only the most essential operating system functions, such as basic hardware control, interrupt handling, and low-level communication.
+
+Key Features:
+- Very small in size.
+- Provides minimal core functionality.
+- Most operating system services are handled outside the kernel.
+- Aims to reduce kernel complexity.
+Example: Nanokernel-based designs are used in some embedded and real-time operating system architectures.
+2. Exokernel
+Definition: An exokernel is an operating system kernel that provides applications with direct, secure access to hardware resources while protecting those resources from unauthorized use.
+
+Key Features:
+- Very small and minimal kernel.
+- Allows applications to manage hardware resources with greater flexibility.
+- Leaves many traditional OS services to applications or user-level libraries.
+- Can improve performance by reducing unnecessary abstraction.
+Example: MIT Exokernel is a research project that demonstrates the exokernel architecture.
+Difference between Nanokernel and Exokernel
+Nanokernel	Exokernel
+Focuses on providing a minimal core of kernel functionality.	Focuses on securely exposing hardware resources to applications.
+Handles essential low-level operations.	Handles resource protection and allocation.
+Commonly discussed in embedded and real-time designs.	Commonly discussed in research on flexible, application-specific OS designs.
+Minimizes the kernel's size and responsibilities.	Gives applications greater control over how resources are used.
 
 ### Kernel Types at a Glance
 
