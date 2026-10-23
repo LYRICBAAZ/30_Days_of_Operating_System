@@ -149,14 +149,6 @@ Key Features:
 - Very small and minimal kernel.
 - Allows applications to manage hardware resources with greater flexibility.
 - Leaves many traditional OS services to applications or user-level libraries.
-- Can improve performance by reducing unnecessary abstraction.
-Example: MIT Exokernel is a research project that demonstrates the exokernel architecture.
-Difference between Nanokernel and Exokernel
-Nanokernel	Exokernel
-Focuses on providing a minimal core of kernel functionality.	Focuses on securely exposing hardware resources to applications.
-Handles essential low-level operations.	Handles resource protection and allocation.
-Commonly discussed in embedded and real-time designs.	Commonly discussed in research on flexible, application-specific OS designs.
-Minimizes the kernel's size and responsibilities.	Gives applications greater control over how resources are used.
 
 ### Kernel Types at a Glance
 
